@@ -1,7 +1,7 @@
 # Terraform Cloud Getting Started Guide Example
 
 This is an example Terraform configuration intended for use with the [Terraform Cloud Getting Started Guide](https://learn.hashicorp.com/terraform/cloud-gettingstarted/tfc_overview).
-
+s
 ## What will this do?
 
 This is a Terraform configuration that will create an EC2 instance in your AWS account. 
