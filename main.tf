@@ -1,7 +1,8 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 provider "aws" {
-  region = var.region
+  region = "eu-central-1"
 }
 
+resource "aws_s3_bucket" "mein_bucket" {
+  bucket = "mein-einzigartiger-bucket-name-12345"
+  acl    = "private"
+}

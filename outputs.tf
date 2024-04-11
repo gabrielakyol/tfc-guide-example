@@ -1,11 +1,4 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+output "s3_bucket_url" {
+  description = "Der öffentliche URL des S3 Buckets"
+  value       = "https://${aws_s3_bucket.mein_bucket.bucket}.s3.amazonaws.com/"
 }
-
-output "instance_arn" {
-  value = aws_instance.ubuntu.arn
-}
-

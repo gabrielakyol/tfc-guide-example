@@ -1,18 +1,8 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+  description = "Die AWS-Region, in der der S3 Bucket erstellt wird."
+  default     = "eu-central-1"
 }
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "bucket_name" {
+  description = "Der Name des zu erstellenden S3 Buckets."
 }
-
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
-}
-
