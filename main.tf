@@ -1,5 +1,13 @@
 terraform {
   required_version = ">= 0.17.0"
+  cloud {
+    hostname = "terraform-dev.tools.ics-resources.mhp.cloud"
+    organization = "ICS"
+
+    workspaces {
+      name = "enablement-workspace"
+    }
+  }
 }
 
 provider "aws" {
