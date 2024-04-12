@@ -1,20 +1,13 @@
-terraform {
-  required_version = ">= 0.17.0"
-  cloud {
-    hostname = "terraform-dev.tools.ics-resources.mhp.cloud"
-    organization = "ICS"
+resource "aws_s3_bucket" "mein_bucket" {
+  bucket = "mein-einzigartiger-bucket-name-12345"
 
-    workspaces {
-      name = "enablement-workspace"
-    }
+
+  tags = {
+    Name = "My TF Bucket"
   }
 }
 
-provider "aws" {
-  region = "${var.aws_region}"
-}
-
-resource "aws_s3_bucket" "mein_bucket" {
-  bucket = "mein-einzigartiger-bucket-name-12345"
+resource "aws_s3_bucket_acl" "mein_bucket_acl" {
+  bucket = aws_s3_bucket.mein_bucket.id
   acl    = "private"
 }
