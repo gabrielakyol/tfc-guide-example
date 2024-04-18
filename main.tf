@@ -5,6 +5,6 @@ resource "aws_s3_bucket" "tfe-example" {
     }
 }
 resource "aws_s3_bucket_acl" "tfe-example" {
-  bucket = aws_s3_bucket.example.id
+  bucket = aws_s3_bucket.tfe-example.id
   acl    = "private"
 }
