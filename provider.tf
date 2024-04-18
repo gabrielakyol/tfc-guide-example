@@ -1,4 +1,17 @@
 terraform {
+    cloud {
+
+        hostname = "terraform-dev.tools.ics-resources.mhp.cloud"
+
+        organization = "ICS"
+
+        workspaces {
+
+        name = "tfc-guide-example"
+
+        }
+
+    }
     required_providers {
         aws = {
             source = "hashicorp/aws"
@@ -6,6 +19,9 @@ terraform {
         }
     }
 }
+
+
+
 
 provider "aws" {
     # Configuration options
